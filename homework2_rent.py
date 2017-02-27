@@ -44,8 +44,9 @@ def score_rent():
 
 def predict_rent():
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
-    lr = LinearRegression().fit(X_train, y_train)
-    predictedLabels = np.matrix(lr.predict(X_test))
+    clf = Ridge(alpha=10.0)
+    clf.fit(X_train, y_train)
+    predictedLabels = np.matrix(clf.predict(X_test))
     return X_test,y_test,predictedLabels
 
 def test():
