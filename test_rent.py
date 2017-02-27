@@ -7,4 +7,4 @@ Created on Sun Feb 19 18:38:39 2017
 """
 
 if __name__ == "__main__":
-    assert(p.score_rent()>0.5010)
+    assert(p.score_rent()>0.5)
